@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>무료 비밀특강 | 고가상품, 화법으로 팔고 구조로 모으기</title>
+<meta name="author" content="이지나">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css">
+<style>*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --pur:#7D55C7; --pur-d:#5B3A9E; --lav:#E8E2F5; --lav2:#F4F0FB;
+  --ink:#1E1830; --sub:#5E5872; --line:#E2DCEE; --bg:#FAF8FD; --card:#fff;
+  --night:#17122A; --gold:#E9C46A; --warn:#C2410C;
+  --glow:rgba(125,85,199,.35); --night2:#2A1F4A; --foot:#120E20; --soft:#C9C2DC; --hl:#B79BEB;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Pretendard','Apple SD Gothic Neo','Malgun Gothic',sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;word-break:keep-all;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:640px;margin:0 auto;padding:0 20px}
+section{padding:56px 0}
+section.wrap{padding:56px 20px}
+.ribbon{background:var(--night);color:#fff;text-align:center;font-size:14px;font-weight:700;padding:10px 16px}
+.ribbon b{color:var(--gold)}
+.eyebrow{display:inline-block;background:var(--lav);color:var(--pur-d);font-size:13px;font-weight:800;border-radius:999px;padding:5px 14px;margin-bottom:16px}
+h1{font-size:30px;line-height:1.35;font-weight:900;letter-spacing:-.6px}
+h2{font-size:24px;line-height:1.4;font-weight:900;letter-spacing:-.4px;margin-bottom:10px}
+h1 em,h2 em{font-style:normal;color:var(--pur)}
+.lead{font-size:16.5px;color:var(--sub);margin-top:14px}
+.center{text-align:center}
+.sub{color:var(--sub);font-size:15px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 6px 24px rgba(60,40,110,.06)}
+.dark{background:var(--night);color:#fff}
+.dark .sub,.dark .lead{color:var(--soft)}
+.dark h2 em{color:var(--hl)}
+.tint{background:var(--lav2)}
+
+/* 버튼 */
+.cta{display:block;width:100%;border:0;cursor:pointer;background:var(--pur);color:#fff;font:inherit;font-size:18px;font-weight:800;text-align:center;text-decoration:none;border-radius:14px;padding:18px 20px;box-shadow:0 8px 22px var(--glow);transition:transform .15s,background .15s}
+.cta:hover{background:var(--pur-d)}
+.cta:active{transform:translateY(1px)}
+.cta[disabled]{background:#B9AEC9;box-shadow:none;cursor:not-allowed}
+.cta small{display:block;font-size:13px;font-weight:600;opacity:.85;margin-top:2px}
+
+/* 목록 */
+.checks{list-style:none;display:flex;flex-direction:column;gap:10px;margin-top:20px}
+.checks li{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px 14px 46px;position:relative;font-weight:600}
+.checks li::before{content:"✕";position:absolute;left:16px;top:13px;width:20px;height:20px;border-radius:50%;background:#FCE7DC;color:var(--warn);font-size:12px;font-weight:900;display:flex;align-items:center;justify-content:center}
+.checks.ok li::before{content:"✓";background:var(--lav);color:var(--pur-d)}
+
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:26px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:16px 8px;text-align:center}
+.stat b{display:block;font-size:22px;font-weight:900;color:var(--pur)}
+.stat span{font-size:12.5px;color:var(--sub);line-height:1.4;display:block;margin-top:4px}
+
+.pillars{display:grid;gap:12px;margin-top:24px}
+.pillar{display:flex;gap:14px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px}
+.pillar .no{flex:none;width:40px;height:40px;border-radius:12px;background:var(--pur);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:17px}
+.pillar b{display:block;font-size:17px;margin-bottom:2px}
+.pillar p{font-size:14.5px;color:var(--sub)}
+
+/* 영상 */
+.video{position:relative;border-radius:16px;overflow:hidden;background:#000;aspect-ratio:16/9}
+.video video{width:100%;height:100%;display:block}
+.video-ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:#fff;background:linear-gradient(135deg,var(--night2),var(--night));text-align:center;padding:20px}
+.video-ph .play{width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.14);display:flex;align-items:center;justify-content:center;font-size:24px}
+.video-ph p{font-size:14px;color:#C9C2DC}
+.speed{display:flex;gap:6px;justify-content:flex-end;margin-top:8px}
+.speed button{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:4px 10px;font:inherit;font-size:13px;cursor:pointer}
+.speed button[aria-pressed="true"]{background:var(--pur);color:#fff;border-color:var(--pur)}
+
+/* 폼 */
+.field{display:flex;flex-direction:column;gap:6px;margin-bottom:12px}
+.field label{font-size:14px;font-weight:700}
+.field input{font:inherit;font-size:16px;border:1.5px solid var(--line);border-radius:12px;padding:13px 14px;background:#fff;color:var(--ink)}
+.field input:focus{outline:none;border-color:var(--pur);box-shadow:0 0 0 3px var(--lav)}
+.agree{display:flex;flex-direction:column;gap:8px;margin:14px 0 16px;font-size:14px}
+.agree label{display:flex;gap:8px;align-items:flex-start;cursor:pointer}
+.agree input{margin-top:4px;width:18px;height:18px;accent-color:var(--pur);flex:none}
+.agree .all{font-weight:800;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.agree a{color:var(--sub);font-size:12.5px;margin-left:4px}
+.agree .gift{display:block;font-size:12.5px;color:var(--pur-d)}
+.err{color:var(--warn);font-size:13.5px;min-height:20px;margin-bottom:6px}
+.trust{display:flex;flex-wrap:wrap;justify-content:center;gap:6px 14px;margin-top:12px;font-size:12.5px;color:var(--sub)}
+
+/* 진행 표시 */
+.journey{display:flex;gap:6px;margin:22px 0 0}
+.journey div{flex:1;text-align:center;font-size:12px;font-weight:700;color:var(--sub);padding-top:10px;border-top:4px solid var(--line)}
+.journey .on{color:var(--pur-d);border-color:var(--pur)}
+
+/* 확인 필요 표시 (배포 전 지울 것) */
+.todo{background:#FFF3C4;color:#7A5200;border-radius:4px;padding:0 4px;font-weight:700}
+
+/* 아래 고정 버튼 (모바일) */
+.sticky{position:fixed;left:0;right:0;bottom:0;z-index:40;padding:10px 16px calc(10px + env(safe-area-inset-bottom,0px));background:rgba(250,248,253,.94);backdrop-filter:blur(8px);border-top:1px solid var(--line);transform:translateY(110%);transition:transform .25s}
+.sticky.show{transform:none}
+.sticky .cta{max-width:600px;margin:0 auto;font-size:16px;padding:14px}
+
+/* 푸터·약관 */
+footer{background:var(--foot);color:#9A93AE;font-size:12.5px;line-height:1.8;padding:30px 20px 110px;text-align:center}
+footer button{background:none;border:0;color:#C9C2DC;font:inherit;text-decoration:underline;cursor:pointer;margin:0 6px}
+dialog.legal{border:0;border-radius:16px;max-width:560px;width:calc(100% - 32px);max-height:85vh;padding:0;margin:auto}
+dialog.legal::backdrop{background:rgba(15,10,30,.55)}
+.legal-head{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line);position:sticky;top:0;background:#fff}
+.legal-head b{font-size:17px}
+.legal-head button{border:0;background:none;font-size:24px;cursor:pointer;color:var(--sub)}
+.legal-body{padding:18px 20px 24px;font-size:13.5px;line-height:1.85;white-space:pre-wrap;color:#333}
+
+@media (max-width:420px){
+  h1{font-size:26px} h2{font-size:21px}
+  .stat b{font-size:19px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sticky{transition:none}}
+
+:root{--pur:#7D55C7;--pur-d:#5B3A9E;--lav:#E8E2F5;--lav2:#F4F0FB;--line:#E2DCEE;--bg:#FAF8FD;--night:#17122A;--night2:#2A1F4A;--foot:#120E20;--gold:#E9C46A;--glow:rgba(125,85,199,.35);--hl:#B79BEB;}
+
+.top{padding:34px 0 18px;text-align:center}
+.top h1{font-size:25px}
+.lockbox{margin-top:18px;text-align:center}
+.lockbox .timer{font-size:14px;color:var(--sub);margin-top:8px}
+.lockbox .timer b{color:var(--pur);font-variant-numeric:tabular-nums}
+</style>
+<script>window.F770={"PRODUCT": "고가상품 세일즈 시스템 1:1마스터", "SOURCE": "funnel770", "PIXEL": "1604828611189459", "STEP2_URL": "https://gnamessenger.github.io/aura-seminar-watch/", "STEP3_URL": "https://gnamessenger.github.io/aura-consult/", "VIDEO_STEP2": "", "POSTER_STEP2": "", "VIDEO_STEP3": "", "POSTER_STEP3": "", "UNLOCK_SEC": 90, "CAL_BTN_SEC": 30, "FORM_URL": "https://docs.google.com/forms/d/e/1FAIpQLSfJ1KL36MAVhkFyyM2mRuFYSg-Q6uBWxpqd694iFVZNzPaOmQ/viewform", "FORM_ENTRY": {"name": "entry.190185620", "phone": "entry.465795657", "email": "entry.2012915602"}, "CAL_URL": "https://calendar.google.com/calendar/appointments/schedules/AcZssZ2pRa2V5-x6gXVeRbTekylXnM_m7uO7hTqvniEhehQLgCkALDmjg2qfGiq1yhQJIaxWW1ex2qiX", "BANK_NO": "100000363187", "FIREBASE": {"apiKey": "AIzaSyBjL-AdZVHBZdsvzqniuPDynk7G3-kH6yU", "authDomain": "salesscript-87136.firebaseapp.com", "projectId": "salesscript-87136", "appId": "1:91082261854:web:73018d6b146d69db6b3bcf"}};</script>
+<script>/* 세 단계 공통: 연락처 넘기기 · 메타 픽셀 · 약관 창 · 아래 고정 버튼 · 배속 */
+(function(){
+  var C = window.F770;
+
+  // 1) 앞 단계에서 넘어온 연락처를 받아 두고, 주소창에서는 바로 지운다
+  //    (픽셀이 이름·전화번호가 든 주소를 메타로 보내지 않게, 픽셀보다 먼저 실행)
+  var KEY = 'f770_lead';
+  var q = new URLSearchParams(location.search);
+  var lead = {};
+  try { lead = JSON.parse(sessionStorage.getItem(KEY) || '{}'); } catch(e){}
+  if (q.get('n') || q.get('p') || q.get('e')) {
+    lead = { name: q.get('n') || '', phone: q.get('p') || '', email: q.get('e') || '' };
+    try { sessionStorage.setItem(KEY, JSON.stringify(lead)); } catch(e){}
+    ['n','p','e'].forEach(function(k){ q.delete(k); });
+    var rest = q.toString();
+    history.replaceState(null, '', location.pathname + (rest ? '?' + rest : '') + location.hash);
+  }
+  C.lead = lead;
+  C.saveLead = function(l){ C.lead = l; try { sessionStorage.setItem(KEY, JSON.stringify(l)); } catch(e){} };
+  C.nextUrl = function(base){
+    var l = C.lead || {}, p = new URLSearchParams();
+    if (l.name) p.set('n', l.name);
+    if (l.phone) p.set('p', l.phone);
+    if (l.email) p.set('e', l.email);
+    // 광고 추적용 utm 값은 그대로 이어 붙임
+    new URLSearchParams(location.search).forEach(function(v,k){ if (/^utm_|^fbclid$/.test(k)) p.set(k, v); });
+    var s = p.toString();
+    return base + (s ? '?' + s : '');
+  };
+
+  // 2) 메타 픽셀
+  if (C.PIXEL) {
+    !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', C.PIXEL);
+    fbq('track', 'PageView');
+  }
+  C.track = function(ev, data){
+    try { if (window.fbq) fbq(ev.indexOf('custom:') === 0 ? 'trackCustom' : 'track', ev.replace('custom:',''), Object.assign({ content_name: C.PRODUCT }, data || {})); } catch(e){}
+  };
+
+  document.addEventListener('DOMContentLoaded', function(){
+    // 3) 약관 창
+    document.querySelectorAll('[data-legal]').forEach(function(b){
+      b.addEventListener('click', function(e){
+        e.preventDefault();
+        var d = document.getElementById('legal-' + b.dataset.legal);
+        if (d && d.showModal) d.showModal();
+      });
+    });
+    document.querySelectorAll('dialog.legal').forEach(function(d){
+      d.querySelector('[data-close]').addEventListener('click', function(){ d.close(); });
+      d.addEventListener('click', function(e){ if (e.target === d) d.close(); });
+    });
+
+    // 4) 아래 고정 버튼: 본문 버튼(.watch)이 화면에 없을 때만 보이기
+    var sticky = document.querySelector('.sticky');
+    var watched = document.querySelectorAll('.watch');
+    if (sticky && watched.length && 'IntersectionObserver' in window) {
+      var visible = new Set();
+      var update = function(){
+        sticky.classList.toggle('show', window.scrollY > 400 && visible.size === 0 && !sticky.hasAttribute('data-locked'));
+      };
+      var io = new IntersectionObserver(function(es){
+        es.forEach(function(en){ en.isIntersecting ? visible.add(en.target) : visible.delete(en.target); });
+        update();
+      });
+      watched.forEach(function(w){ io.observe(w); });
+      window.addEventListener('scroll', update, { passive: true });
+    }
+
+    // 5) 배속 버튼
+    document.querySelectorAll('.speed').forEach(function(box){
+      var v = document.getElementById(box.dataset.for);
+      box.addEventListener('click', function(e){
+        var b = e.target.closest('button'); if (!b || !v) return;
+        v.playbackRate = +b.dataset.rate;
+        box.querySelectorAll('button').forEach(function(x){ x.setAttribute('aria-pressed', String(x === b)); });
+      });
+    });
+  });
+})();
+</script>
+</head>
+<body>
+<div class="ribbon"><span id="hello">지금 바로 시청하세요</span></div>
+
+<header class="top wrap">
+  <span class="eyebrow">무료 비밀특강</span>
+  <h1>만 원짜리 100명 vs 천만 원짜리 1명<br><em>그 1명이 알아서 찾아오게</em> 만드는 법</h1>
+</header>
+
+<main class="wrap">
+  <div class="video" id="v2box"></div>
+  <div class="speed" data-for="v2" hidden><button type="button" data-rate="1" aria-pressed="true">1x</button><button type="button" data-rate="1.25" aria-pressed="false">1.25x</button><button type="button" data-rate="1.5" aria-pressed="false">1.5x</button></div>
+
+  <div class="lockbox">
+    <button class="cta watch" id="next" type="button" disabled>🔒 1:1 진단상담 안내 보기</button>
+    <p class="timer" id="timer">영상을 보시는 동안 <b id="left">1:30</b> 뒤에 버튼이 열려요</p>
+  </div>
+
+  <div class="journey" aria-label="진행 단계">
+    <div class="on">① 특강 시청</div><div>② 1:1 진단상담</div><div>③ 1:1 과정 시작</div>
+  </div>
+</main>
+
+<section class="wrap">
+  <h2 class="center">이 특강에서 공개하는 것</h2>
+  <ul class="checks ok">
+    <li>고객이 먼저 "얼마예요?"라고 묻게 만드는 고가 세일즈 화법 순서</li>
+    <li>신청 → 특강 → 진단상담 → 예약 안내가 저절로 돌아가는 퍼널 구조</li>
+    <li>그 퍼널에 손님을 계속 흘려 넣는 메타 광고 세팅의 핵심</li>
+  </ul>
+</section>
+
+<div class="sticky" data-locked><a class="cta" id="nextSticky" href="#">1:1 진단상담 안내 보기</a></div>
+<footer>
+  아우라세일즈 | 대표 조혜영 | 사업자등록번호 825-90-01995<br>
+  경기도 화성시 매송고색로 366, 205호 | 전화 010-4242-9810<br>
+  <button type="button" data-legal="terms">이용약관</button><button type="button" data-legal="privacy">개인정보처리방침</button><br>
+  Copyright ⓒ 아우라세일즈. All rights reserved.
+</footer>
+<dialog class="legal" id="legal-terms"><div class="legal-head"><b>이용약관</b><button type="button" data-close aria-label="닫기">&times;</button></div><div class="legal-body">제1조 (목적)
+이 약관은 아우라세일즈(이하 "회사")가 제공하는 무료 특강 및 1:1 진단상담 서비스(이하 "서비스")의 이용조건 및 절차, 회사와 이용자의 권리·의무 및 책임사항을 규정함을 목적으로 합니다.
+
+제2조 (서비스의 내용)
+1. 고가상품 세일즈·퍼널 자동화 관련 온라인 특강 제공
+2. 1:1 맞춤형 진단상담(온라인 Zoom 또는 오프라인) 제공
+3. 기타 회사가 정하는 부가서비스
+
+제3조 (이용계약의 성립)
+진단상담 이용계약은 이용자가 신청서 작성 및 상담 일정 예약을 완료하고, 회사가 정한 진단상담비를 결제함으로써 성립합니다.
+
+제4조 (서비스 이용요금 및 결제)
+1. 1:1 진단상담비는 50,000원이며, 계좌이체 방식으로 결제합니다.
+2. 진단상담 후 정규 과정에 등록하시는 경우 진단상담비 50,000원은 정규 과정 수강료에서 전액 차감됩니다.
+
+제5조 (청약철회 및 환불)
+1. 이용자는 상담 예정일 기준 24시간 전까지 취소를 요청할 경우, 결제한 진단상담비 전액을 환불받을 수 있습니다.
+2. 상담 예정일 기준 24시간 이내 취소 또는 무단 불참(노쇼)의 경우, 환불이 제한될 수 있습니다.
+3. 환불 요청은 카카오톡 채널을 통해 접수하며, 확인 후 영업일 기준 5일 이내 처리합니다.
+
+제6조 (회사의 의무)
+회사는 관련 법령과 이 약관이 금지하거나 미풍양속에 반하는 행위를 하지 않으며, 안정적인 서비스 제공을 위해 노력합니다.
+
+제7조 (이용자의 의무)
+이용자는 신청서 작성 시 정확한 정보를 제공해야 하며, 허위 정보로 인해 발생하는 불이익에 대해 회사는 책임지지 않습니다.
+
+제8조 (면책조항)
+회사는 천재지변, 이용자의 귀책사유 등 회사가 통제할 수 없는 사유로 인한 서비스 중단에 대해 책임을 지지 않습니다. 특강과 상담에서 소개하는 실적은 강사 본인 및 수강생의 과거 사례이며, 같은 결과를 보장하지 않습니다.
+
+부칙
+이 약관은 2026년 10월 3일부터 시행합니다.</div></dialog>
+<dialog class="legal" id="legal-privacy"><div class="legal-head"><b>개인정보처리방침</b><button type="button" data-close aria-label="닫기">&times;</button></div><div class="legal-body">아우라세일즈(이하 "회사")는 이용자의 개인정보를 중요시하며, 「개인정보 보호법」 등 관련 법령을 준수합니다.
+
+1. 수집하는 개인정보 항목
+- 필수: 이름, 휴대폰번호, 이메일 주소
+- 진단상담 신청 시: 신청서 응답 내용, 상담 일정
+- 결제 시: 입금자명(계좌이체 확인용)
+- 자동 수집: 방문 기록, 기기·브라우저 정보(메타 픽셀)
+
+2. 수집 및 이용 목적
+- 특강 시청 안내, 진단상담 예약·진행 및 안내(알림톡·문자·이메일)
+- 진단상담비 결제 확인, 문의 응대
+- [선택 동의 시] 새 특강·무료 자료·교육 과정 등 광고성 정보 발송
+- 광고 성과 측정
+
+3. 보유 및 이용 기간
+수집일로부터 3년간 보유하며, 이용자가 삭제를 요청하면 지체 없이 파기합니다. 다만 관계 법령에 따라 보존이 필요한 경우 해당 기간 동안 보관합니다.
+
+4. 동의 거부 권리
+이용자는 개인정보 수집·이용에 동의하지 않을 수 있습니다. 다만 필수 항목에 동의하지 않으시면 특강 시청 안내를 받으실 수 없습니다. 광고성 정보 수신은 선택이며, 동의하지 않아도 특강은 그대로 보실 수 있습니다.
+
+5. 개인정보 처리위탁 및 국외 이전
+- Google(Firebase·Google Forms·Google Calendar): 신청 정보 저장, 신청서 접수, 일정 예약 관리 — 미국 등 Google 서버
+- 알리고(Aligo): 카카오 알림톡 발송
+- Meta Platforms(메타 픽셀): 광고 성과 측정 — 미국
+
+6. 제3자 제공
+회사는 이용자의 개인정보를 원칙적으로 외부에 제공하지 않습니다. 다만 이용자의 동의가 있거나 법령에 특별한 규정이 있는 경우는 예외로 합니다.
+
+7. 이용자의 권리
+이용자는 언제든지 본인의 개인정보 열람·정정·삭제 및 광고성 정보 수신 철회를 요청할 수 있습니다. 카카오톡 채널 또는 아래 연락처로 요청해 주세요.
+
+8. 개인정보 보호책임자
+- 성명: 조혜영
+- 연락처: 010-4242-9810
+
+시행일: 2026년 10월 3일</div></dialog>
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  var C = window.F770;
+  if (C.lead.name) document.getElementById('hello').textContent = C.lead.name + '님, 지금 바로 시청하세요';
+
+  // 영상: 주소가 비어 있으면 '준비 중' 자리만 보여 줌
+  var box = document.getElementById('v2box');
+  if (C.VIDEO_STEP2) {
+    box.innerHTML = '<video id="v2" controls playsinline preload="metadata" controlslist="nodownload" disablepictureinpicture' + (C.POSTER_STEP2 ? ' poster="' + C.POSTER_STEP2 + '"' : '') + '><source src="' + C.VIDEO_STEP2 + '" type="video/mp4"></video>';
+    document.querySelector('.speed').hidden = false;
+    box.querySelector('video').addEventListener('contextmenu', function(e){ e.preventDefault(); });
+  } else {
+    box.innerHTML = '<div class="video-ph"><div class="play">▶</div><b>특강 영상 자리</b><p>영상이 준비되면 여기에 들어가요</p></div>';
+  }
+
+  // 버튼 잠금: 페이지 연 뒤 UNLOCK_SEC 지나면 열림
+  var btn = document.getElementById('next'), sticky = document.querySelector('.sticky'), left = document.getElementById('left'), timer = document.getElementById('timer');
+  var until = Date.now() + C.UNLOCK_SEC * 1000;
+  function go(){ C.track('custom:GoDiagnosis'); location.href = C.nextUrl(C.STEP3_URL); }
+  function tick(){
+    var s = Math.max(0, Math.ceil((until - Date.now()) / 1000));
+    left.textContent = Math.floor(s / 60) + ':' + String(s % 60).padStart(2, '0');
+    if (s > 0) return setTimeout(tick, 500);
+    btn.disabled = false; btn.textContent = '1:1 진단상담 안내 보기 →';
+    timer.textContent = '특강을 끝까지 보신 뒤 눌러도 괜찮아요';
+    sticky.removeAttribute('data-locked');
+  }
+  tick();
+  btn.addEventListener('click', go);
+  document.getElementById('nextSticky').addEventListener('click', function(e){ e.preventDefault(); go(); });
+});
+</script>
+</body>
+</html>
